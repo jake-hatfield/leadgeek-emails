@@ -1,0 +1,31 @@
+<script props>
+	module.exports = {
+		align: props.align,
+		href: props.href || 'https://leadgeek.io',
+		msoFill: props.msoFill || '#ff154b',
+	};
+</script>
+
+<div align="{{ align }}">
+	<!--[if mso]>
+  <v:roundrect style="height: 44px; mso-wrap-style: none;" stroke="f" fillcolor="{{ msoFill }}">
+  <![endif]-->
+	<a
+		attributes
+		href="{{ href }}"
+		class="mb-5 inline-block p-3 text-sm leading-none font-semibold text-white bg-rose-600 hover:bg-rose-700 [text-decoration:none]"
+	>
+		<outlook>
+			<i class="tracking-3 mso-font-width-[-100%] mso-text-raise-1.5" hidden
+				>&nbsp;</i
+			>
+		</outlook>
+		<span><content></content></span>
+		<outlook>
+			<i class="tracking-3 mso-font-width-[-100%]" hidden>&nbsp;</i>
+		</outlook>
+	</a>
+	<!--[if mso]>
+    </v:roundrect>
+  <![endif]-->
+</div>

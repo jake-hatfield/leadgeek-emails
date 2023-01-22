@@ -1,0 +1,74 @@
+html {
+	@apply font-sans text-zinc-700;
+}
+
+h1 {
+	@apply text-2xl leading-9 text-zinc-900 font-mono;
+	@apply sm:text-xl sm:leading-8;
+}
+
+h2 {
+	@apply text-xl leading-8 text-zinc-900 font-mono;
+	@apply sm:text-lg sm:leading-7;
+}
+
+h3,
+h4,
+h5,
+h6 {
+	@apply text-xl leading-7 text-zinc-900 font-mono;
+	@apply m-0 mb-3;
+	@apply sm:text-lg sm:leading-6;
+}
+
+p {
+	@apply text-base leading-6;
+	@apply m-0 mb-3;
+}
+
+ul,
+ol {
+	@apply leading-6;
+}
+
+blockquote {
+	p {
+		@apply m-0;
+	}
+
+	@apply [border-left:4px_solid_#fff];
+	@apply m-0 mb-5 pl-4;
+}
+
+hr {
+	@apply border-0 h-px text-zinc-800 bg-zinc-800;
+	@apply my-5;
+}
+
+img {
+	@apply max-w-full leading-full align-middle;
+	border: 0;
+}
+
+a {
+	@apply text-cyan-600 hover:text-cyan-700;
+	text-decoration: underline;
+}
+
+pre {
+	@apply p-5 mb-5 overflow-auto whitespace-pre;
+	@apply font-mono text-base text-left;
+	@apply bg-zinc-800;
+	hyphens: none;
+	tab-size: 2;
+	word-break: normal;
+	word-spacing: normal;
+	word-wrap: normal;
+}
+
+/* Inline code */
+:not(pre) > code {
+	@apply px-1.5 py-0.5;
+	@apply text-sm whitespace-normal;
+	@apply bg-zinc-800 text-cyan-500 border border-solid border-zinc-700;
+}

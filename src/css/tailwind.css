@@ -1,0 +1,10 @@
+/* Tailwind CSS components */
+@import 'tailwindcss/components';
+
+@import 'markdown';
+
+/* Tailwind CSS utility classes */
+@import 'tailwindcss/utilities';
+
+/* Your custom utility classes */
+@import 'utilities';

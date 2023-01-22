@@ -1,0 +1,119 @@
+<!DOCTYPE {{{ page.doctype || 'html' }}}>
+<html
+	lang="{{ page.language || 'en' }}"
+	xmlns:v="urn:schemas-microsoft-com:vml"
+>
+	<head>
+		<meta charset="{{ page.charset || 'utf-8' }}" />
+		<meta name="x-apple-disable-message-reformatting" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="format-detection"
+			content="telephone=no, date=no, address=no, email=no, url=no"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=IBM+Plex+Mono&display=swap"
+			rel="stylesheet"
+		/>
+		<!--[if mso]>
+			<noscript>
+				<xml>
+					<o:OfficeDocumentSettings
+						xmlns:o="urn:schemas-microsoft-com:office:office"
+					>
+						<o:PixelsPerInch>96</o:PixelsPerInch>
+					</o:OfficeDocumentSettings>
+				</xml>
+			</noscript>
+			<style>
+				td,
+				th,
+				div,
+				p,
+				a,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6 {
+					font-family: 'Segoe UI', sans-serif;
+					mso-line-height-rule: exactly;
+				}
+			</style>
+		<![endif]-->
+		<if condition="page.title">
+			<title>{{{ page.title }}}</title>
+		</if>
+		<style>
+			{{{ page.css }}}
+		</style>
+		<stack name="head"></stack>
+	</head>
+	<body
+		class="m-0 p-0 w-full [word-break:break-word] [-webkit-font-smoothing:antialiased] {{ page.bodyClass || 'bg-white' }}"
+	>
+		<if condition="page.preheader">
+			<div class="hidden">
+				{{{ page.preheader }}}
+				<each loop="item in Array.from(Array(150))">&#847; </each>
+			</div>
+		</if>
+		<div
+			align="center"
+			role="article"
+			aria-roledescription="email"
+			lang="{{ page.language || 'en' }}"
+			class="sm:px-3 {{ page.bodyClass || 'bg-white' }}"
+			aria-label="{{{ page.title || '' }}}"
+		>
+			<x-spacer height="40px"></x-spacer>
+			<div class="text-center">
+				<img src="logo.png" width="75" alt="Leadgeek logo" />
+			</div>
+			<table class="font-sans">
+				<tr>
+					<td class="w-150 max-w-full pt-8 pb-5">
+						<table class="w-full bg-white">
+							<tr>
+								<td class="px-5 sm:px-3 max-w-0">
+									<slot:template></slot:template>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td class="px-5 sm:px-3 text-zinc-600">
+						<table class="w-full">
+							<tr>
+								<td class="sm:block sm:w-full">
+									<img
+										src="logo.png"
+										width="75"
+										class="sm:w-16"
+										alt="Leadgeek logo"
+									/>
+									<p class="pt-5">
+										The 🌎's most comprehensive online arbitrage marketplace.
+									</p>
+									<p>
+										Leadgeek has provided 11k product leads and counting. Made
+										with ❤️ in Houston, TX.
+									</p>
+									<p>
+										⚖️ ©️ 2023 Leadgeek<br />
+										📌 5900 Balcones Drive, Suite 100, Austin, TX 78731
+									</p>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<x-spacer height="40px"></x-spacer>
+		</div>
+	</body>
+</html>
